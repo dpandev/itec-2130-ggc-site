@@ -1,0 +1,35 @@
+name: Trigger cPanel pull + deploy
+on:
+  push:
+    branches: [ main ]   # deploy on every push to main
+  workflow_dispatch:      # allow manual "Run workflow" from the Actions tab
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull latest into cPanel-managed repo
+        env:
+          AUTH:  ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}
+          HOST:  ${{ secrets.CPANEL_HOST }}
+          REPO:  ${{ secrets.CPANEL_REPO_PATH }}   # e.g. /home/USER/repos/site.git or as shown in cPanel
+          BRANCH: ${{ secrets.CPANEL_BRANCH }}     # optional; if empty defaults to main
+        run: |
+          curl -sS --fail \
+            -H "Authorization: cpanel $AUTH" \
+            --get \
+            --data-urlencode "repository_root=$REPO" \
+            --data-urlencode "branch=${BRANCH:-main}" \
+            "https://$HOST:2083/execute/VersionControl/update"
+
+      - name: Deploy HEAD via .cpanel.yml
+        env:
+          AUTH:  ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}
+          HOST:  ${{ secrets.CPANEL_HOST }}
+          REPO:  ${{ secrets.CPANEL_REPO_PATH }}
+        run: |
+          curl -sS --fail \
+            -H "Authorization: cpanel $AUTH" \
+            --get \
+            --data-urlencode "repository_root=$REPO" \
+            "https://$HOST:2083/execute/VersionControlDeployment/create"
