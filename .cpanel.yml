@@ -1,4 +1,32 @@
+---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/dpanesiu/public_html/
-    - /usr/bin/rsync -a --delete --exclude=".git" --exclude=".cpanel.yml" ./ $DEPLOYPATH
+    # 0) Where to publish
+    - export DEPLOYPATH=/home/CPANEL_USER/public_html/
+    - export NODE_ENV=production
+
+    # 1) Ensure Node is available (uncomment the one cPanel shows you)
+    #    In cPanel > "Setup Node.js App" it displays an activation line like:
+    # - source /home/CPANEL_USER/nodevenv/your-app/18/bin/activate
+
+    # 2) Build the Vite app
+    - cd ./
+    - npm ci
+    - npm run build     # creates ./dist
+
+    # 3) Publish build output
+    #    Use rsync if available (exact mirror, keeps things clean)
+    - /usr/bin/rsync -a --delete --exclude=".htaccess" dist/ $DEPLOYPATH
+
+    # 4) SPA routing (only create .htaccess if one doesn't exist already)
+    - |
+      if [ ! -f "$DEPLOYPATH/.htaccess" ]; then
+        cat > "$DEPLOYPATH/.htaccess" <<'HT'
+      RewriteEngine On
+      RewriteBase /
+      RewriteRule ^index\.html$ - [L]
+      RewriteCond %{REQUEST_FILENAME} !-f
+      RewriteCond %{REQUEST_FILENAME} !-d
+      RewriteRule . /index.html [L]
+      HT
+      fi
