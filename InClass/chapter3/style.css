@@ -1,0 +1,41 @@
+main {
+  color: #ffffff;
+  background-color: green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  font-weight: 800;
+  margin: auto 10px;
+}
+
+h1 {
+  color: blue;
+  background-color: green;
+  text-decoration: underline;
+}
+
+ul li {
+  font-style: italic;
+  line-height: 200%;
+  letter-spacing: 10px;
+}
+
+h2 {
+  text-decoration: underline;
+  word-spacing: 20px;
+}
+
+#wrapper {
+  background-color: #efe4e4;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.format {
+  font-size: 1.5em;
+  font-family: Cambria, Cochin, Georgia, Times;
+}
+
+main ul li {
+  color: #000000;
+  background-color: #ffffff;
+}
