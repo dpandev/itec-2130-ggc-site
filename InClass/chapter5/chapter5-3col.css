@@ -36,9 +36,15 @@ nav ul li a:visited {
 }
 main {
   background-color: #9fcbf7;
-  margin-left: 20%;
-  width: 80%;
+  float: left;
+  width: 60%;
   padding: 10px;
+  margin-left: 20%;
+}
+aside {
+  width: 20%;
+  float: left;
+  background-color: #fff000;
 }
 footer {
   background-color: #606161;
