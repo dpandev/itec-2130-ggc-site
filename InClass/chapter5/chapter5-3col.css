@@ -71,3 +71,54 @@ footer {
   text-align: center;
   color: #fff;
 }
+
+h1 {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Desgin for IPAD */
+
+@media only all and (max-width: 768px) {
+  body {
+    background-color: #faebd7;
+  }
+  aside {
+    display: none;
+  }
+  main {
+    width: 80%;
+    float: left;
+    margin-left: 0;
+  }
+}
+/* Design for phone */
+@media only all and (max-width: 500px) {
+  #container {
+    width: 100%;
+  }
+  nav {
+    width: 100%;
+    margin: 0 0;
+    padding: 0;
+    border: 0.15em #000 solid;
+  }
+  nav ul li {
+    border: 0.15em #000 solid;
+  }
+  main {
+    width: 100%;
+    margin: 0 0;
+    color: #ff0000;
+  }
+  aside {
+    width: 0;
+    display: none;
+  }
+  img {
+    display: none;
+  }
+}
