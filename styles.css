@@ -24,6 +24,10 @@ header nav button.nb-navbar-toggle {
 footer {
   /* min-height:50px; */
 }
+footer a {
+  color: #000;
+  text-decoration: none;
+}
 .nb-button.default{
   display:inline-block;
   padding:.5em 1em;
