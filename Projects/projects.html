@@ -2,25 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>ITEC 2130</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="../assets/rocketship.png">
+    <title>ITEC 2130 | Projects</title>
   </head>
   <body>
     <header>
-      <h1>Welcome to ITEC 2130 Website!</h1>
+      <nav class="nb-navbar" role="navigation" aria-label="Main navigation">
+        <a href="/" class="nb-navbar-brand" aria-label="Go to homepage">ITEC 2130 - Web Technologies</a>
+        <button class="nb-navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nb-navbar-nav" role="menubar">
+          <li class="nb-navbar-item" role="none">
+            <a href="/" class="nb-navbar-link" role="menuitem">Home</a>
+          </li>
+          <li class="nb-navbar-item" role="none">
+            <a href="/InClass/inclass.html" class="nb-navbar-link" role="menuitem">In Class Activities</a>
+          </li>
+          <li class="nb-navbar-item" role="none">
+            <a href="/Labs/labs.html" class="nb-navbar-link" role="menuitem">Labs</a>
+          </li>
+          <li class="nb-navbar-item" role="none">
+            <a href="/Projects/projects.html" class="nb-navbar-link active" role="menuitem" aria-current="page">Projects</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <Nav>
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/InClass/inclass.html">Inclass</a></li>
-        <li><a href="/Labs/labs.html">Labs</a></li>
-        <li><a href="/Projects/projects.html">Projects</a></li>
-      </ul>
-    </Nav>
     <main>
-      Projects
+      <h1 class="nb-text-center nb-mb-4">Projects</h1>
+      <div class="nb-grid-4">
+        <div class="nb-card">
+          <div class="nb-card-content">
+              <h4 class="nb-card-title">Project 1: Site Redesign</h4>
+              <div class="nb-card-actions">
+                <a href="#" class="nb-button orange">View Project</a>
+              </div>
+          </div>
+        </div>
+        <div class="nb-card">
+          <div class="nb-card-content">
+              <h4 class="nb-card-title">Project 2</h4>
+              <div class="nb-card-actions">
+                <button href="#" class="nb-button orange disabled">Coming Soon</button>
+              </div>
+          </div>
+        </div>
+        <div class="nb-card">
+          <div class="nb-card-content">
+            <h4 class="nb-card-title">Project 3</h4>
+            <div class="nb-card-actions">
+              <button href="#" class="nb-button orange disabled">Coming Soon</button>
+            </div>
+        </div>
+      </div>
     </main>
     <footer>
-      This is an educational Website
+      <p class="nb-text-center">Copyright 2025 © David P.</p>
     </footer>
+    <script src="../mobile-nav.js"></script>
   </body>
 </html>

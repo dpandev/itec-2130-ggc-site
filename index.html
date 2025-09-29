@@ -2,26 +2,135 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>ITEC 2130</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="./assets/rocketship.png">
+    <title>Welcome</title>
   </head>
   <body>
     <header>
-      <h1>Welcome to ITEC 2130 Website!</h1>
+      <div class="nb-marquee orange">
+        <div class="nb-marquee-content">
+          <span>Welcome to my portfolio site!</span>
+          <span>Let's make some cool stuff!</span>
+        </div>
+      </div>
+      <div class="nb-p-2 nb-p-md-1"></div>
+      <nav class="nb-navbar" role="navigation" aria-label="Main navigation">
+        <a href="/" class="nb-navbar-brand" aria-label="Go to homepage">ITEC 2130 - Web Technologies</a>
+        <button class="nb-navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nb-navbar-nav" role="menubar">
+          <li class="nb-navbar-item" role="none">
+            <a href="/" class="nb-navbar-link active" role="menuitem" aria-current="page">Home</a>
+          </li>
+          <li class="nb-navbar-item" role="none">
+            <a href="/InClass/inclass.html" class="nb-navbar-link" role="menuitem">In Class Activities</a>
+          </li>
+          <li class="nb-navbar-item" role="none">
+            <a href="/Labs/labs.html" class="nb-navbar-link" role="menuitem">Labs</a>
+          </li>
+          <li class="nb-navbar-item" role="none">
+            <a href="/Projects/projects.html" class="nb-navbar-link" role="menuitem">Projects</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <Nav>
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/InClass/inclass.html">Inclass</a></li>
-        <li><a href="/Labs/labs.html">Labs</a></li>
-        <li><a href="/Projects/projects.html">Projects</a></li>
-      </ul>
-    </Nav>
     <main>
-      <h1>Homepage</h1>
-      <a href="/"></a>
+      <div class="nb-grid-4">
+        <div class="nb-card">
+          <img src="/assets/dpandev.png" class="nb-card-img">
+          <div class="nb-card-content">
+              <h4 class="nb-card-title">About Me</h4>
+              <p class="nb-card-text">Hi! My name is David and I'm a web developer studying to become a full-stack software engineer.</p>
+              <div class="nb-flex-row">
+                <a href="https://www.github.com/dpandev/" target="_blank" class="nb-button default nb-button-icon">
+                  <i class="fa fa-3x fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/dpandev/" target="_blank" class="nb-button default nb-button-icon">
+                  <i class="fa fa-3x fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="nb-button default nb-button-icon">
+                  <i class="fa fa-3x fa-youtube" aria-hidden="true"></i>
+                </a>
+                <div class="nb-card-actions">
+                    <a href="mailto:dpanesiu@ggc.edu" class="nb-button orange"><i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;Send me an email</a>
+                </div>
+              </div>
+          </div>
+       </div>
+        <div class="nb-card">
+          <div class="nb-card-content">
+              <h4 class="nb-card-title">Skills</h4>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>HTML / CSS</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>JavaScript / TypeScript</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>React / Next.js / Expo / React Native</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>Tailwind CSS</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>MySQL / PostgreSQL / MongoDB</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>Java / Python</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>Docker</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>AWS / GCP / Azure</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>MacOS / Linux / Windows</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>Agile / Scrum</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>RESTful APIs</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>WordPress / Shopify</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>Git / GitHub / GitLab</li>
+                <li><span class="fa-li"><i class="fa fa-code"></i></span>Jira / Trello</li>
+              </ul>
+              <div class="nb-card-actions">
+                  <a href="#" class="nb-button orange">Learn More</a>
+              </div>
+          </div>
+       </div>
+        <div class="nb-card">
+          <div class="nb-card-content">
+              <h4 class="nb-card-title">Courses Taken</h4>
+              <ol>
+                <li>ITEC 1001</li>
+                <li>ITEC 2110</li>
+                <li>ITEC 2120</li>
+                <li>ITEC 2130</li>
+                <li>ITEC 2140</li>
+                <li>ITEC 2150</li>
+                <li>ITEC 2201</li>
+                <li>ITEC 3100</li>
+                <li>ITEC 3150</li>
+                <li>ITEC 3200</li>
+                <li>ITEC 3860</li>
+              </ol>
+              <div class="nb-card-actions">
+                  <a href="#" class="nb-button orange">Learn More</a>
+              </div>
+          </div>
+       </div>
+        <div class="nb-card">
+          <div class="nb-card-content">
+            <h4 class="nb-card-title">Projects</h4>
+            <dl>
+              <dt><span><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;</span>Descent Exchange iOS App</dt>
+              <dd><span><i class="fa fa-star" aria-hidden="true"></i>&nbsp;</span>iOS app that allows users to sign up, login, and trade virtual crypto currencies.</dd>
+              <dd><span><i class="fa fa-star" aria-hidden="true"></i>&nbsp;</span>Built with AWS, React Native, Expo, TypeScript, CryptoPanic API, and CoinGecko API </dd>
+              <dd><span><i class="fa fa-star" aria-hidden="true"></i>&nbsp;</span>Deployed to the App Store<br><br></dd>
+      
+              <dt><span><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;</span>eCommerce Websites</dt>
+              <dd><span><i class="fa fa-star" aria-hidden="true"></i>&nbsp;</span>Designed and developed responsive eCommerce websites for small to medium-sized businesses.<br><br></dd>
+      
+              <dt><span><i class="fa fa-paint-brush" aria-hidden="true"></i>&nbsp;</span>Branding and Site Design</dt>
+              <dd><span><i class="fa fa-star" aria-hidden="true"></i>&nbsp;</span>Worked with clients to create brand identities and design websites.<br><br></dd>
+            </dl>
+            <div class="nb-card-actions">
+                <a href="#" class="nb-button orange">Learn More</a>
+            </div>
+        </div>
+      </div>
     </main>
     <footer>
-      This is an educational Website
+      <p class="nb-text-center">Copyright 2025 © David P.</p>
     </footer>
+    <script src="mobile-nav.js"></script>
   </body>
 </html>
