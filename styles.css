@@ -1432,13 +1432,13 @@ footer {
   border-bottom:3.5px solid #000
 }
 .nb-dialog.green{
-  border:3.5px solid "black";
+  border:3.5px solid #000;
   box-shadow:8px 8px 0px #000
 }
 .nb-dialog.green .nb-dialog-header{
   background-color:#40d39c;
   color:#fff;
-  border-bottom:3.5px solid "black"
+  border-bottom:3.5px solid #000;
 }
 .nb-dialog.sky-blue{
   border:3.5px solid #000;
