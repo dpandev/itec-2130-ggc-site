@@ -1,0 +1,31 @@
+#container {
+  width: 80%;
+  margin: auto;
+  background-color: #0db3b3;
+}
+table {
+  border: 3px solid #000;
+  background-image: url(./images/favicon.png);
+  border-collapse: collapse;
+  width: 80%;
+}
+table tr, th, td {
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: center;
+}
+table th {
+  background-color: #5f9ea0;
+}
+tr:nth-of-type(even) {
+  background-color: #ff5767;
+}
+tr:nth-of-type(odd) {
+  background-color: #ff9494;
+}
+td:last-child {
+  background-color: #0000ff;
+}
+footer {
+  text-align: center;
+}

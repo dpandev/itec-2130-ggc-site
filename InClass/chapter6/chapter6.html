@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chapter 6</title>
+    <link rel="stylesheet" href="./chapter6.css">
+  </head>
+  <body>
+    <div id="container">
+      <header><h1>Chapter 6 Tables</h1></header>
+      <main>
+        <table>
+          <caption>Details</caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th id="name"> Name </th>
+              <th id="date"> Date </th>
+              <th id="grade"> Grade </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="5">Rowspan</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td colspan="2">Colspan</td>
+              <td>DIY</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>6</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td headers="name">ABC</td>
+              <td headers="date">2025-01-01</td>
+              <td headers="grade">100</td>
+            </tr>
+            <tr>
+              <td headers="name">XYZ</td>
+              <td headers="date">2025-01-02</td>
+              <td headers="grade">90</td>
+            </tr>
+          </tbody>
+          <tfoot>Table Footer</tfoot>
+        </table>
+      </main>
+      <footer>
+        <p>Copyright 2025 © David | <a href="/images/valid-html.png">Valid HTML </a> &amp; CSS 👌</p>
+      </footer>
+    </div>
+  </body>
+</html>
