@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Client intake form for website development projects">
+  <title>Client Intake Form - Website Development</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="client_intake.css">
+  <link rel="icon" type="image/png" href="../../assets/rocketship.png">
+</head>
+<body>
+  <header>
+    <div class="nb-marquee orange">
+      <div class="nb-marquee-content">
+        <span>Let's Build Something Amazing!</span>
+        <span>Fill Out The Form Below!</span>
+      </div>
+    </div>
+    <div class="nb-p-2 nb-p-md-1"></div>
+    <nav class="nb-navbar" role="navigation" aria-label="Main navigation">
+      <a href="../../index.html" class="nb-navbar-brand" aria-label="Go to homepage">ITEC 2130 - Web Technologies</a>
+      <button class="nb-navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nb-navbar-nav" role="menubar">
+        <li class="nb-navbar-item" role="none">
+          <a href="../../index.html" class="nb-navbar-link" role="menuitem">Home</a>
+        </li>
+        <li class="nb-navbar-item" role="none">
+          <a href="../../InClass/inclass.html" class="nb-navbar-link" role="menuitem">In Class Activities</a>
+        </li>
+        <li class="nb-navbar-item" role="none">
+          <a href="../../Labs/labs.html" class="nb-navbar-link" role="menuitem">Labs</a>
+        </li>
+        <li class="nb-navbar-item" role="none">
+          <a href="../../Projects/projects.html" class="nb-navbar-link active" role="menuitem" aria-current="page">Projects</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <div class="form-header">
+        <h1>Client Intake Form</h1>
+        <p>Let's start your web development journey! Fill out the information below so we can better understand your project needs.</p>
+      </div>
+
+      <form action="#" method="post" id="client-intake-form">
+        <!-- Contact Information Section -->
+        <fieldset class="form-section">
+          <legend>Contact Information</legend>
+          
+          <div class="nb-form-group">
+            <label for="fullName">Full Name</label>
+            <input 
+              type="text" 
+              id="fullName" 
+              name="fullName" 
+              class="nb-input default" 
+              placeholder="Enter your full name"
+              required
+            >
+          </div>
+
+          <div class="nb-form-group">
+            <label for="businessName">Business Name</label>
+            <input 
+              type="text" 
+              id="businessName" 
+              name="businessName" 
+              class="nb-input default" 
+              placeholder="Enter your business name"
+              required
+            >
+          </div>
+
+          <div class="nb-form-group">
+            <label for="email">Email Address</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="nb-input default" 
+              placeholder="your.email@example.com"
+              required
+            >
+          </div>
+
+          <div class="nb-form-group">
+            <label for="phone">Phone Number</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              class="nb-input default" 
+              placeholder="(555) 123-4567"
+              required
+            >
+          </div>
+        </fieldset>
+
+        <!-- Project Information Section -->
+        <fieldset class="form-section">
+          <legend>Project Information</legend>
+
+          <div class="nb-form-group">
+            <label for="websiteUrl">Current Website URL (if applicable)</label>
+            <input 
+              type="url" 
+              id="websiteUrl" 
+              name="websiteUrl" 
+              class="nb-input default" 
+              placeholder="https://www.example.com"
+            >
+          </div>
+
+          <div class="nb-form-group">
+            <label for="projectPurpose">Project Purpose</label>
+            <select 
+              id="projectPurpose" 
+              name="projectPurpose" 
+              class="nb-dropdown default"
+              required
+            >
+              <option value="">-- Select a purpose --</option>
+              <option value="new-website">New Website</option>
+              <option value="redesign">Website Redesign</option>
+              <option value="ecommerce">E-Commerce Site</option>
+              <option value="portfolio">Portfolio Site</option>
+              <option value="blog">Blog/News Site</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="nb-form-group">
+            <label for="contentReady">Is Your Content Ready?</label>
+            <select 
+              id="contentReady" 
+              name="contentReady" 
+              class="nb-dropdown default"
+              required
+            >
+              <option value="">-- Select an option --</option>
+              <option value="yes">Yes, all content is ready</option>
+              <option value="partial">Partially ready</option>
+              <option value="no">No, need help with content</option>
+              <option value="unsure">Not sure</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Project Details Section -->
+        <fieldset class="form-section">
+          <legend>Project Details</legend>
+
+          <div class="nb-form-group">
+            <label for="featuresNeeded">Features Needed</label>
+            <textarea 
+              id="featuresNeeded" 
+              name="featuresNeeded" 
+              class="nb-textarea default" 
+              rows="5"
+              placeholder="Describe the features you need (e.g., contact form, image gallery, blog, user accounts, etc.)"
+              required
+            ></textarea>
+          </div>
+
+          <div class="nb-form-group">
+            <label for="designIdea">Design Ideas</label>
+            <textarea 
+              id="designIdea" 
+              name="designIdea" 
+              class="nb-textarea default" 
+              rows="5"
+              placeholder="Share your vision for the design (colors, style, inspiration, competitor sites, etc.)"
+              required
+            ></textarea>
+          </div>
+
+          <div class="nb-form-group">
+            <label for="additionalInfo">Additional Information</label>
+            <textarea 
+              id="additionalInfo" 
+              name="additionalInfo" 
+              class="nb-textarea default" 
+              rows="5"
+              placeholder="Any other details you'd like to share about your project?"
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Budget and Timeline Section -->
+        <fieldset class="form-section">
+          <legend>Budget and Timeline</legend>
+
+          <div class="nb-form-group">
+            <label for="budget">Estimated Budget Range</label>
+            <input 
+              type="text" 
+              id="budget" 
+              name="budget" 
+              class="nb-input default" 
+              placeholder="e.g., $5,000 - $10,000"
+              required
+            >
+          </div>
+
+          <div class="nb-form-group">
+            <label for="deadline">Desired Completion Date</label>
+            <input 
+              type="date" 
+              id="deadline" 
+              name="deadline" 
+              class="nb-input default" 
+              required
+            >
+          </div>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <div class="form-actions">
+          <button type="submit" class="nb-button orange">
+            Submit Application
+          </button>
+          <button type="reset" class="nb-button default">
+            Reset Form
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p class="nb-text-center">Copyright 2025 © David P.</p>
+    <p class="nb-text-center">Valid <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="https://validator.w3.org/nu/?doc=https://dpanesiu.domains.ggc.edu/Projects/project3/client_intake.html">HTML</a></p>
+  </footer>
+
+  <script src="../../mobile-nav.js"></script>
+</body>
+</html>
