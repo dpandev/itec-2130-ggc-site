@@ -1,0 +1,476 @@
+/* ========================================
+    David Panesiu
+    Project 2 - Responsive Resume
+   ======================================== */
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark,
+audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+/* Typography */
+h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 1em;
+}
+
+h2 {
+  font-size: 1.6em;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+p, ul {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0 2em;
+  line-height: 1.6;
+}
+
+/* ========================================
+   Main Split Container Layout
+   ======================================== */
+
+.split-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.split-container > div,
+.split-container > aside,
+.split-container > main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================
+   Left Panel (Navigation Sidebar)
+   ======================================== */
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(255, 100%, 61%);
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: auto;
+  padding-bottom: 2em;
+}
+
+/* Logo Container */
+.logo-container {
+  align-self: center;
+  height: 90px;
+  width: auto;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.logo {
+  margin-top: 1em;
+  height: 50px;
+  width: auto;
+}
+
+/* Main Navigation */
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.left-panel a {
+  text-decoration: overline;
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+}
+
+.left-panel a:hover {
+  background-color: white;
+  color: hsl(255, 100%, 61%);
+}
+
+/* ========================================
+   Social Media Buttons (Center Overlay)
+   ======================================== */
+
+.social-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100vw;
+  background-color: hsl(255, 100%, 61%);
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0.5em 2em;
+  fill: white;
+}
+
+.social-icon {
+  width: 24px;
+  height: auto;
+}
+
+/* ========================================
+   Right Panel (Main Content Area)
+   ======================================== */
+
+.right-panel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: hsl(0, 0%, 14%);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  height: auto;
+  margin-left: 10px;
+}
+
+.right-panel h1,
+.right-panel h2 {
+  color: hsl(255, 100%, 62%);
+}
+
+/* Page Header */
+.page-header {
+  width: 100%;
+  text-align: center;
+}
+
+/* ========================================
+   Content Sections
+   ======================================== */
+
+/* About Section */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.avatar {
+  height: auto;
+  max-width: 80px;
+  border-radius: 50%;
+}
+
+/* Skills Section */
+.skills-section li {
+  list-style-type: square;
+}
+
+.skills-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Contact Information List */
+.contact-info-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.contact-info-list li {
+  margin: 0.5rem 0;
+}
+
+.contact-info-list a {
+  color: hsl(255, 100%, 61%);
+  text-decoration: none;
+}
+
+.contact-info-list a:hover {
+  text-decoration: underline;
+}
+
+/* Education Section */
+.education-item {
+  margin: 1.5rem 0;
+}
+
+.education-item h3 {
+  color: hsl(255, 100%, 61%);
+  margin-bottom: 0.5rem;
+}
+
+.certifications-list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* Projects Section */
+.project-item {
+  margin: 2rem 0;
+  padding: 1rem;
+  border-left: 3px solid hsl(255, 100%, 61%);
+  background-color: rgba(110, 61, 255, 0.05);
+}
+
+.project-item h3 {
+  color: hsl(255, 100%, 61%);
+  margin-bottom: 0.5rem;
+}
+
+.project-item a {
+  color: hsl(255, 100%, 61%);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-item a:hover {
+  text-decoration: underline;
+}
+
+/* Experience Section */
+.experience-item {
+  margin: 2rem 0;
+  padding: 1rem;
+  border-left: 3px solid hsl(255, 100%, 61%);
+}
+
+.experience-item h3 {
+  color: hsl(255, 100%, 61%);
+  margin-bottom: 0.25rem;
+}
+
+.experience-item ul {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.experience-item li {
+  margin: 0.3rem 0;
+}
+
+/* Courses Section */
+.courses-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.courses-list li {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background-color: rgba(110, 61, 255, 0.05);
+  border-left: 3px solid hsl(255, 100%, 61%);
+}
+
+/* Awards Section */
+.awards-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.awards-list li {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background-color: rgba(110, 61, 255, 0.05);
+  border-left: 3px solid hsl(255, 100%, 61%);
+}
+
+/* Contact Section */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: hsl(255, 100%, 61%);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: hsl(255, 100%, 51%);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ebebeb;
+  width: 100%;
+}
+
+.site-footer p {
+  margin: 0;
+  padding: 0;
+  color: hsl(255, 100%, 61%);
+}
+
+/* ========================================
+   Responsive Design - Desktop (60em+)
+   ======================================== */
+
+@media all and (min-width: 60em) {
+  /* Split Screen Layout */
+  .split-container {
+    flex-direction: row;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    backface-visibility: hidden;
+    will-change: overflow;
+  }
+
+  .split-container > div,
+  .split-container > aside,
+  .split-container > main {
+    min-width: 50%;
+    width: 50%;
+  }
+
+  /* Left Panel Adjustments */
+  .logo {
+    height: 300px;
+    width: auto;
+  }
+
+  .main-navigation {
+    align-items: center;
+  }
+
+  .logo-container {
+    height: 300px;
+    width: auto;
+    margin-bottom: 2em;
+  }
+
+  /* Social Buttons - Center Overlay */
+  .social-buttons {
+    z-index: 1000;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -25px;
+    max-width: 50px;
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+  .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 2px 2px 2px hsla(255, 59%, 23%, 0.42);
+    border-radius: 50%;
+    border: 2px solid hsl(255, 100%, 61%);
+    background-color: white;
+    margin-bottom: 2em;
+    color: hsl(255, 100%, 61%);
+    padding: 0.5em;
+    fill: hsl(255, 100%, 61%);
+  }
+
+  .social-button:hover {
+    border: 2px solid white;
+    background-color: hsl(255, 100%, 61%);
+    transition: all 0.4s ease-out;
+    color: white;
+    fill: white;
+  }
+
+  .social-button:active {
+    border: 2px solid white;
+    background-color: hsl(255, 100%, 61%);
+    transition: all 60ms ease;
+    transform: scale(0.97);
+    color: white;
+    fill: white;
+  }
+
+  /* Content Padding */
+  p, ul {
+    padding: 0 4em;
+  }
+}

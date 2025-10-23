@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio website showcasing projects and skills">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <title>Project 2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Main Split Container -->
+  <div class="split-container">
+
+    <!-- Left Panel: Navigation and Branding -->
+    <aside class="left-panel">
+      <!-- Logo Section -->
+      <div class="logo-container">
+        <svg class="logo" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-label="Rocket logo">
+          <!-- Rocket body -->
+          <path d="M 40 90 L 40 40 Q 40 20, 50 10 Q 60 20, 60 40 L 60 90 Z" fill="#fff" stroke="#fff" stroke-width="2"/>
+          
+          <!-- Rocket nose cone -->
+          <path d="M 40 40 Q 50 15, 60 40" fill="#e0e0e0"/>
+          
+          <!-- Window -->
+          <circle cx="50" cy="50" r="8" fill="#6e3dff" stroke="#fff" stroke-width="2"/>
+          <circle cx="50" cy="50" r="5" fill="#b9e2f8" opacity="0.6"/>
+          
+          <!-- Rocket fins -->
+          <path d="M 40 70 L 25 85 L 40 85 Z" fill="#fff" stroke="#fff" stroke-width="1"/>
+          <path d="M 60 70 L 75 85 L 60 85 Z" fill="#fff" stroke="#fff" stroke-width="1"/>
+          
+          <!-- Wing details -->
+          <path d="M 40 75 L 30 87 L 40 82 Z" fill="#e0e0e0"/>
+          <path d="M 60 75 L 70 87 L 60 82 Z" fill="#e0e0e0"/>
+          
+          <!-- Flame/exhaust -->
+          <g class="flame">
+            <ellipse cx="50" cy="95" rx="8" ry="12" fill="#ff6b35" opacity="0.9"/>
+            <ellipse cx="50" cy="98" rx="6" ry="10" fill="#ffd700" opacity="0.8"/>
+            <ellipse cx="50" cy="102" rx="4" ry="8" fill="#fff" opacity="0.7"/>
+          </g>
+          
+          <!-- Side details/rivets -->
+          <circle cx="45" cy="65" r="1.5" fill="#e0e0e0"/>
+          <circle cx="55" cy="65" r="1.5" fill="#e0e0e0"/>
+          <circle cx="45" cy="75" r="1.5" fill="#e0e0e0"/>
+          <circle cx="55" cy="75" r="1.5" fill="#e0e0e0"/>
+        </svg>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="main-navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#courses">Courses</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </aside>
+
+    <!-- Social Media Buttons (Center Overlay) -->
+    <div class="social-buttons">
+      <a href="https://github.com/dpandev/" class="social-button" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+        <svg class="social-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+          <path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/dpandev/" class="social-button" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+        <svg class="social-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+          <path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z"/>
+        </svg>
+      </a>
+      <a href="mailto:dpanesiu@ggc.edu" class="social-button" aria-label="Email contact">
+        <svg class="social-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+          <path d="M0 4v8c0 .55.45 1 1 1h14c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13.5.5l-5.5 4-5.5-4h11zM1.5 11.5v-6l6.5 4.5 6.5-4.5v6h-13z"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Right Panel: Main Content -->
+    <main class="right-panel">
+      <!-- Header Section -->
+      <header class="page-header">
+        <h1>David Panesiu</h1>
+        <p>Web Developer | Designer | Problem Solver</p>
+      </header>
+
+      <!-- About Section -->
+      <section id="about" class="content-section about-section">
+        <img src="./assets/profile-pic.jpeg" alt="Profile picture" class="avatar">
+        <h2>About</h2>
+        <p>Passionate web developer and designer with expertise in creating innovative digital solutions. Based in Atlanta, GA, with a strong foundation in computer science and information technology. Currently pursuing a Bachelor's degree at Georgia Gwinnett College while building practical experience in web development, UI/UX design, and modern web technologies.</p>
+        <p>Dedicated to writing clean, maintainable code and creating user-centered designs that solve real-world problems. Always eager to learn new technologies and collaborate on exciting projects.</p>
+        
+        <h3>Contact Information</h3>
+        <ul class="contact-info-list">
+          <li><strong>Name:</strong> David Panesiu</li>
+          <li><strong>Email:</strong> <a href="mailto:dpanesiu@ggc.edu">dpanesiu@ggc.edu</a></li>
+          <li><strong>Location:</strong> Novi, MI</li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dpandev/" target="_blank" rel="noopener noreferrer">linkedin.com/in/dpandev</a></li>
+          <li><strong>Website:</strong> <a href="../../index.html">Portfolio Homepage</a></li>
+        </ul>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="content-section education-section">
+        <h2>Educational Background</h2>
+        
+        <article class="education-item">
+          <h3>Georgia Gwinnett College</h3>
+          <p><strong>Bachelor of Science in Information Technology</strong></p>
+          <p>Expected Graduation: 2026</p>
+          <p>Concentration in Web Development and Software Engineering</p>
+          <p>Relevant Coursework: Web Development, Database Design, Software Engineering, Data Structures, Computer Networks, UI/UX Design</p>
+        </article>
+
+        <article class="education-item">
+          <h3>Professional Certifications</h3>
+          <ul class="certifications-list">
+            <li>Responsive Web Design Certification - freeCodeCamp</li>
+            <li>JavaScript Algorithms and Data Structures - freeCodeCamp</li>
+            <li>Front End Development Libraries - freeCodeCamp</li>
+            <li>Git & GitHub Essential Training - LinkedIn Learning</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="content-section projects-section">
+        <h2>Major Projects</h2>
+        
+        <article class="project-item">
+          <h3>Descent Exchange iOS App</h3>
+          <p>Developed a modern, responsive iOS app that allows users to sign up, login, and trade virtual crypto currencies. Built with AWS, React Native, Expo, TypeScript, CryptoPanic API, and CoinGecko API. Deployed to the App Store.</p>
+          <p><strong>Technologies:</strong> React Native, Expo, TypeScript, CryptoPanic API, CoinGecko API, AWS, Xcode, iOS, macOS, App Store, Google Play Store</p>
+          <p><a href="https://github.com/dpandev/" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+        </article>
+
+        <article class="project-item">
+          <h3>Portfolio Website</h3>
+          <p>Developed a modern, responsive portfolio website featuring neo-brutalism design principles. Implemented semantic HTML5, custom CSS animations, and JavaScript for smooth navigation and interactive elements.</p>
+          <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript, Responsive Design</p>
+          <p><a href="/" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+        </article>
+
+				<article class="experience-item">
+          <h3>Freelance Web Developer</h3>
+          <p><strong>Self-Employed</strong> | 2023 - Present</p>
+          <ul>
+            <li>Designed and developed responsive websites for small businesses and personal clients</li>
+            <li>Collaborated with clients to understand requirements and deliver custom solutions</li>
+            <li>Implemented modern web standards and accessibility best practices</li>
+            <li>Maintained and updated existing websites with new features and content</li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <h3>Web Developer</h3>
+          <p><strong>Prairie IT Marketing</strong> | 2021 - 2023</p>
+          <ul>
+            <li>Assisted senior designers in creating website mockups and prototypes</li>
+            <li>Developed HTML/CSS templates based on design specifications</li>
+            <li>Tested websites across multiple browsers and devices</li>
+            <li>Learned industry workflows and client communication practices</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="content-section skills-section">
+        <h2>Skills & Techniques</h2>
+        
+        <h3>Programming Languages</h3>
+        <ul class="skills-list">
+          <li>HTML5 & CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>PHP</li>
+        </ul>
+
+        <h3>Web Technologies & Frameworks</h3>
+        <ul class="skills-list">
+          <li>React.js</li>
+          <li>Node.js</li>
+          <li>Responsive Web Design</li>
+          <li>CSS Grid & Flexbox</li>
+          <li>Bootstrap & Tailwind CSS</li>
+        </ul>
+
+        <h3>Tools & Software</h3>
+        <ul class="skills-list">
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>Adobe Creative Suite (Photoshop, Illustrator)</li>
+          <li>Figma & Sketch</li>
+          <li>Chrome DevTools</li>
+        </ul>
+
+        <h3>Design & UX</h3>
+        <ul class="skills-list">
+          <li>UI/UX Design Principles</li>
+          <li>Wireframing & Prototyping</li>
+          <li>Accessibility (WCAG Standards)</li>
+          <li>Responsive Design</li>
+          <li>Color Theory & Typography</li>
+        </ul>
+      </section>
+
+      <!-- Courses Section -->
+      <section id="courses" class="content-section courses-section">
+        <h2>Major Courses Taken</h2>
+        <ul class="courses-list">
+          <li><strong>ITEC 2130 - Introduction to Web Development:</strong> Introduction to the Internet and World Wide Web. Topics include HTML, CSS, and JavaScript fundamentals for creating interactive web pages.</li>
+          <li><strong>ITEC 2140 - Multimedia Development:</strong> Development of multimedia applications including graphics, animation, audio, and video content for web and mobile platforms.</li>
+          <li><strong>ITEC 2201 - Computer Programming:</strong> Introduction to computer programming using a high-level language with emphasis on problem solving and algorithm development.</li>
+          <li><strong>ITEC 3100 - Introduction to Networks:</strong> Introduction to computer networks, network protocols, network architecture, and network security fundamentals.</li>
+          <li><strong>ITEC 3150 - Advanced Programming:</strong> Advanced programming concepts including object-oriented programming, data structures, algorithms, and software development practices.</li>
+          <li><strong>ITEC 3200 - Introduction to Databases:</strong> Introduction to database systems including data modeling, SQL, database design, and implementation of relational databases.</li>
+          <li><strong>ITEC 3300 - Information Security:</strong> Fundamentals of information security including cryptography, network security, risk management, and security policies.</li>
+          <li><strong>ITEC 3450 - Computer Graphics and Multimedia:</strong> Principles of computer graphics and multimedia systems including 2D/3D graphics, animation, and interactive media design.</li>
+          <li><strong>ITEC 3550 - User Centered Design:</strong> Principles and methods of user-centered design including usability testing, interface design, and user experience evaluation.</li>
+          <li><strong>ITEC 3600 - Operating Systems:</strong> Introduction to operating system concepts including process management, memory management, file systems, and system security.</li>
+          <li><strong>ITEC 3700 - Systems Analysis and Design:</strong> Methods and techniques for systems analysis and design including requirements gathering, modeling, and implementation strategies.</li>
+          <li><strong>ITEC 3860 - Software Development I:</strong> Software development methodologies, project management, team collaboration, and professional practices in software engineering.</li>
+          <li><strong>ITEC 3900 - Professional Practice and Ethics:</strong> Professional and ethical issues in information technology including legal aspects, social responsibility, and professional conduct.</li>
+          <li><strong>ITEC 4130 - Human Computer Interaction:</strong> Principles of human-computer interaction including interface design, usability evaluation, and cognitive models of user behavior.</li>
+          <li><strong>ITEC 4200 - Advanced Databases:</strong> Advanced database topics including distributed databases, data warehousing, database administration, and performance optimization.</li>
+          <li><strong>ITEC 4330 - System Administration:</strong> System administration concepts including server configuration, networking, backup strategies, and system security management.</li>
+          <li><strong>ITEC 4450 - Web Development:</strong> Advanced web development including server-side programming, database integration, web services, and modern web frameworks.</li>
+          <li><strong>ITEC 4550 - Mobile Application Development:</strong> Design and development of mobile applications for iOS and Android platforms including mobile UI design and app deployment.</li>
+          <li><strong>ITEC 4700 - Artificial Intelligence:</strong> Introduction to artificial intelligence including machine learning, neural networks, expert systems, and AI applications.</li>
+        </ul>
+      </section>
+
+      <!-- Awards Section -->
+      <section id="awards" class="content-section awards-section">
+        <h2>Awards & Achievements</h2>
+        <ul class="awards-list">
+          <li><strong>Dean's List:</strong> Fall 2018, Spring 2019 - Georgia Gwinnett College</li>
+        </ul>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="content-section contact-section">
+        <h2>Contact</h2>
+        <p>Feel free to reach out through any of the following channels:</p>
+        <div class="contact-buttons">
+          <a href="mailto:dpanesiu@ggc.edu" class="contact-button">Email me</a>
+          <a href="https://www.linkedin.com/in/dpandev/" class="contact-button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/dpandev/" class="contact-button" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="contact-button" target="_blank" rel="noopener noreferrer">YouTube</a>
+    		</div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <p>&copy; 2025 David Panesiu. All rights reserved.</p>
+      </footer>
+    </main>
+  </div>
+
+
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
