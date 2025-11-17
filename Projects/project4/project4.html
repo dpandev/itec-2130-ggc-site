@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Space Rocket Game</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div id="gameContainer">
-        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <canvas id="gameCanvas"></canvas>
         
         <div id="score" class="hidden">Score: 0</div>
         
@@ -17,8 +17,8 @@
             <h1>🚀 SPEEDY ROCKET 🚀</h1>
             <p>Navigate your rocket through space and dodge the incoming asteroids!</p>
             <p class="instructions">
-                LEFT MOUSE BUTTON - Pull Up<br>
-                RIGHT MOUSE BUTTON - Pull Down<br>
+                <strong>Desktop:</strong> Left Mouse = Up | Right Mouse = Down<br>
+                <strong>Mobile:</strong> Tap Left Side = Up | Tap Right Side = Down<br>
                 Release to return to center
             </p>
             <button id="startButton">START GAME</button>
@@ -208,6 +208,74 @@
             e.preventDefault();
         });
 
+        // Touch events for mobile
+        let activeTouches = new Set();
+        
+        canvas.addEventListener('touchstart', (e) => {
+            if (!gameRunning || rocket.entering) return;
+            
+            e.preventDefault();
+            
+            // Get all touches
+            for (let i = 0; i < e.touches.length; i++) {
+                const touch = e.touches[i];
+                const rect = canvas.getBoundingClientRect();
+                const touchX = touch.clientX - rect.left;
+                
+                // Left half of screen = go up, right half = go down
+                if (touchX < canvas.width / 2) {
+                    leftMouseDown = true;
+                    rocket.targetY = canvas.height * 0.25;
+                    activeTouches.add('left');
+                } else {
+                    rightMouseDown = true;
+                    rocket.targetY = canvas.height * 0.75;
+                    activeTouches.add('right');
+                }
+            }
+        }, { passive: false });
+
+        canvas.addEventListener('touchend', (e) => {
+            if (!gameRunning) return;
+            
+            e.preventDefault();
+            
+            // Check if any touches remain
+            let hasLeftTouch = false;
+            let hasRightTouch = false;
+            
+            for (let i = 0; i < e.touches.length; i++) {
+                const touch = e.touches[i];
+                const rect = canvas.getBoundingClientRect();
+                const touchX = touch.clientX - rect.left;
+                
+                if (touchX < canvas.width / 2) {
+                    hasLeftTouch = true;
+                } else {
+                    hasRightTouch = true;
+                }
+            }
+            
+            // Update states based on remaining touches
+            if (!hasLeftTouch) {
+                leftMouseDown = false;
+                activeTouches.delete('left');
+            }
+            if (!hasRightTouch) {
+                rightMouseDown = false;
+                activeTouches.delete('right');
+            }
+            
+            // If no touches remain, return to center
+            if (!leftMouseDown && !rightMouseDown) {
+                rocket.targetY = canvas.height / 2;
+            }
+        }, { passive: false });
+
+        canvas.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+        }, { passive: false });
+
         // Update game state
         function update(deltaTime) {
             if (!gameRunning) return;
@@ -384,6 +452,39 @@
         // Event listeners
         startButton.addEventListener('click', startGame);
         restartButton.addEventListener('click', startGame);
+
+        // Handle window resize for responsive canvas
+        function resizeCanvas() {
+            const container = document.getElementById('gameContainer');
+            const rect = container.getBoundingClientRect();
+            
+            // Only update if size has changed
+            if (canvas.width !== rect.width || canvas.height !== rect.height) {
+                canvas.width = Math.floor(rect.width);
+                canvas.height = Math.floor(rect.height);
+                
+                // Update rocket position to stay centered
+                if (!rocket.entering) {
+                    rocket.y = canvas.height / 2;
+                    rocket.targetY = canvas.height / 2;
+                }
+                
+                // Redraw if not running
+                if (!gameRunning) {
+                    draw();
+                }
+            }
+        }
+
+        // Initial resize
+        resizeCanvas();
+        
+        // Resize on window resize (debounced)
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(resizeCanvas, 100);
+        });
 
         // Initial draw
         draw();
