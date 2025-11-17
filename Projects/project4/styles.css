@@ -35,7 +35,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #33DBFF;
+    background: #f5f5f5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,5 +150,103 @@ button:active {
     padding: 15px 25px;
     border: 3px solid #000;
     box-shadow: 5px 5px 0 #000;
+}
+
+/* Footer Links */
+.footer-links {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    gap: 10px;
+    pointer-events: auto;
+}
+
+.footer-left {
+    flex-direction: column;
+}
+
+.validator-button,
+.github-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    color: #000;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-family: "Lexend Mega", "Public Sans", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    transition: background 0.15s cubic-bezier(0.77, 0, 0.18, 1), 
+                color 0.15s cubic-bezier(0.77, 0, 0.18, 1), 
+                box-shadow 0.15s cubic-bezier(0.77, 0, 0.18, 1), 
+                transform 0.1s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.github-button {
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.6em 1.2em;
+}
+
+.github-button i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.validator-button:hover,
+.github-button:hover {
+    box-shadow: 2px 2px 0 #000;
+    transform: translate(2px, 2px);
+}
+
+.validator-button:active,
+.github-button:active {
+    box-shadow: none;
+    transform: translate(4px, 4px);
+}
+
+.github-button:hover {
+    background-color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+    
+    .footer-left {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .validator-button,
+    .github-button {
+        font-size: 0.75rem;
+        padding: 0.4em 0.8em;
+    }
 }
 
