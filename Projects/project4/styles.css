@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lexend Mega", "Public Sans", Arial, sans-serif;
+    background: #33DBFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    border: 5px solid #000;
+    box-shadow: 10px 10px 0 #000;
+    overflow: hidden;
+    background: #000;
+}
+
+#gameCanvas {
+    display: block;
+    background: #000;
+}
+
+#startScreen, #gameOverScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #33DBFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    z-index: 10;
+}
+
+.hidden {
+    display: none !important;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0 #ff5733;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 #ff5733;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 600px;
+    padding: 0 20px;
+    color: #000;
+    font-weight: 600;
+}
+
+button {
+    display: inline-block;
+    padding: 0.7em 1.5em;
+    background-color: #ff5733;
+    color: #fff;
+    border: 3.5px solid #000;
+    box-shadow: 7px 7px 0 #000;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: "Lexend Mega", "Public Sans", Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    transition: background 0.15s cubic-bezier(0.77, 0, 0.18, 1), 
+                color 0.15s cubic-bezier(0.77, 0, 0.18, 1), 
+                box-shadow 0.15s cubic-bezier(0.77, 0, 0.18, 1), 
+                transform 0.1s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+button:hover {
+    background-color: #d64b2b;
+    color: #fff;
+    box-shadow: 2px 2px 0 #000;
+    outline: none;
+    transform: translate(2px, 2px);
+}
+
+button:active {
+    box-shadow: none;
+    transform: translate(4px, 4px);
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: #fff;
+    font-weight: 900;
+    z-index: 5;
+    text-shadow: 3px 3px 0 #000;
+    background: #40d39c;
+    padding: 10px 30px;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+    text-transform: uppercase;
+}
+
+#finalScore {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 900;
+    background: #fdfd96;
+    padding: 10px 25px;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+    text-transform: uppercase;
+}
+
+.instructions {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #000;
+    font-weight: 600;
+    background: #fff;
+    padding: 15px 25px;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+}
+
