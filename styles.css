@@ -4722,22 +4722,18 @@ select.nb-dropdown.pale-yellow:focus{
 
 /* Footer Links */
 .footer-links {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
+    position: relative;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     z-index: 100;
-    pointer-events: none;
 }
 
 .footer-left,
 .footer-right {
     display: flex;
     gap: 10px;
-    pointer-events: auto;
 }
 
 .footer-left {
@@ -4801,9 +4797,7 @@ select.nb-dropdown.pale-yellow:focus{
     .footer-links {
         flex-direction: column;
         gap: 8px;
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
+        padding: 10px;
     }
     
     .footer-left {
@@ -4839,9 +4833,7 @@ select.nb-dropdown.pale-yellow:focus{
 
 @media (max-width: 480px) {
     .footer-links {
-        bottom: 5px;
-        left: 5px;
-        right: 5px;
+        padding: 5px;
     }
     
     .validator-button,
