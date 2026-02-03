@@ -7,7 +7,7 @@
     <hr>
     <h2>How to use Functions defined in a different PHP file</h2>
     <?php
-      include 'lib01.php';
+      include '../Activity1/lib01.php';
       echo "<h3>Example: Creating a Table </h3>";
       echo "<table border='1'>";
       echo "<tr><th>Header 1</th><th>Header 2</th></tr>";
